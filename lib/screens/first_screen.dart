@@ -11,9 +11,10 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        //resizeToAvoidBottomInset: false,
         backgroundColor: Colors.black,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4,vertical: 0),
+          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -24,18 +25,19 @@ class FirstScreen extends StatelessWidget {
                   children: [
                     PhotoFrame(
                       socials: {
-                        'linkedin': 'https://linkedin.com',
-                        'github': 'https://github.com',
-                        'instagram': 'https://instagram.com'
+                        'linkedin':
+                            'https://www.linkedin.com/in/chris-morang-51a77b1ab/',
+                        'github': 'https://github.com/CHRISmorang',
+                        'instagram': 'https://www.instagram.com/chriss__937/'
                       },
-                      photo: 'https://xsgames.co/randomusers/avatar.php?g=male',
+                      photo: 'assets/profile.png',
                       name: 'Coding Elite',
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
-                      'Priyanshu\nSrivastava',
+                      'Chris\nMorang',
                       maxLines: 2,
                       style: TextStyle(
                           color: Colors.white,
@@ -56,8 +58,9 @@ class FirstScreen extends StatelessWidget {
               ),
               const Spacer(),
               const Footer(),
-
-             const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),

@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../controllers/url_launcher.dart';
 
-
 class PhotoFrame extends StatelessWidget {
   final String photo;
   final Map<String, String> socials;
   final String name;
-  const PhotoFrame(
-      {super.key,
-      required this.socials,
-      required this.photo,
-      required this.name,
-      });
+  const PhotoFrame({
+    super.key,
+    required this.socials,
+    required this.photo,
+    required this.name,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +64,7 @@ class PhotoFrame extends StatelessWidget {
                 );
               },
               errorBuilder: (context, error, stackTrace) => Image.asset(
-                'assets/placeholder_dp.png',
+                'assets/profile.png',
               ),
             ),
           ),
@@ -76,7 +75,6 @@ class PhotoFrame extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               InkWell(
-                
                 onTap: () async {
                   await launchUrl(socials['github'] ?? '');
                 },
@@ -91,7 +89,8 @@ class PhotoFrame extends StatelessWidget {
                   await launchUrl(socials['instagram'] ?? '');
                 },
                 splashColor: Colors.grey,
-                child: SvgPicture.asset('assets/instagram.svg',
+                child: SvgPicture.asset(
+                  'assets/instagram.svg',
                   height: 16,
                 ),
               ),
